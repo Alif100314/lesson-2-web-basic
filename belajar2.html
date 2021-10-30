@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detik.com</title>
+    <style>
+        .container{
+            width: 85%;
+            height: 85%;
+            margin: auto;
+            /* border: 1px solid black;    */
+        }
+        .header{
+            /* text-align: center; */
+            
+        }
+        .navigation{
+            background-color: blue;
+            border-radius: 6px;
+        }
+       
+        .navigation ul{
+            border-radius: 6px;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            background: linear-gradient(to right, #21409a 50%, #007cbd 100%);
+            
+        }
+    
+        
+        .navigation ul li{
+            
+            display: inline-block;
+            font-weight: bold ;
+            margin: 5px;
+            padding: 5px;
+        }
+        .navigation ul li:hover{
+            display: inline-block;
+            font-weight: bold ;
+            margin: 5px;
+            padding: 5px;
+            /* background-color: yellow; */
+            cursor: pointer;
+        }
+        .navigation ul li a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        .navigation ul li a:hover{
+            color: yellow;
+            cursor: pointer;
+            
+        }
+        .navigation2{
+            background-color:white;
+            border-radius: 6px;
+        }
+       
+        .navigation2 ul{
+            border-radius: 6px;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        
+            
+        }
+    
+        
+        .navigation2 ul li{
+            
+            display: inline-block;
+            font-weight: bold ;
+            margin: 5px;
+            padding: 5px;
+        }
+        .navigation2 ul li:hover{
+            display: inline-block;
+            font-weight: bold ;
+            margin: 5px;
+            padding: 5px;
+            /* background-color: yellow; */
+            cursor: pointer;
+        }
+        .navigation2 ul li a{
+            text-decoration: none;
+            color: black;
+            
+        }
+        .navigation2 ul li a:hover{
+            color: yellow;
+            cursor: pointer;
+            
+        }
+        .content{
+            height: 300px;
+        }
+        .content .left{
+            float: left;
+            width: 50%;
+            height: 100%;
+            background-color: aqua;
+            
+        }   
+        .content .right{
+            display: inline-block;
+            float: right;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+        }   
+        .footer p{
+            text-align: center;
+            float: none;
+            margin: 0px;
+            font-weight: bold;
+            background-color: yellow;
+        }
+        .header img{
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+        .fixed-header{
+            border-radius: 10px;
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            box-shadow: 2px 2px 5px blue;
+        }
+       
+        .content-top{
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            
+        }
+        .content-top1{
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+        .content-top2{
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+        .content-top3{
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+        .content-top4{
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+        }
+       
+        .content-top-text{
+            margin-top: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .content-top-image img{
+            height: 120px;
+            width: 200px;
+         
+        }
+        .content-top-ok img{
+            height: 120px;
+            width: 200px;
+            border-radius: 40px;
+        }
+        .fh-right{
+            width: 20%;
+            float: right;
+            right: 100%;
+            border-left: 1px solid grey;
+        }
+        .fh-right .item-right{
+            padding-top: 20px;
+            margin-left: 20px;
+        }
+        .fh-right .daftar{
+            background-color: #244B9C;
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+        .fh-right .daftar:hover{
+            background-color: blue;
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            border-radius: 20px;
+        }
+        .fh-right .masuk{
+            background-color: white;
+            text-decoration: none;
+            color: blue;
+            padding: 7px;
+            border: 1px solid blue;
+            border-radius: 20px;
+        }
+        .fh-right .masuk:hover{
+            background-color: #244B9C;
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            border-radius: 20px;
+        }
+        .fh-center{
+            width: 60%;
+            float: right;
+            height: 100%;
+            text-align: center;
+            border-left: 1px solid grey;
+        }
+        .fh-center .search{
+            width: 330px;
+            float: right;
+            margin-top: 15px;
+            margin-left: 50px;
+            margin-right: 300px;
+            box-shadow: 0px 0px 5px grey;
+            border-radius: 20px;
+        }
+        .fh-center .search #input{
+            border: none;
+            padding: 10px;
+            width: 250px;
+            background: none;
+            outline: none;
+        }
+        .fh-center .search #button{
+            width: 30px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .fh-center .search #button img{
+            width: 15px;
+            border: 2px;
+            background: white;
+            cursor: pointer;
+        }
+        .kiri{
+            width: 20%;
+        }
+        .kiri .logo img{
+            width: 197px;
+            margin: 8px 18px 8px;
+        }
+        .content-buttom{
+            height: 300px;
+            width: 100%;
+        }
+        .content-left{
+            float: left;
+            width: 60%;
+            overflow: hidden;
+        }
+        .content-right{
+            float: left;
+            width: 40%;
+        }
+        .fitur-img-wrapper{
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            z-index: 20;
+        }
+        .fitur-img{
+            height: 100%;
+            background-image: url(gambar/oioi.jpeg);
+            transition: all .5s;
+            background-size: cover;
+
+        }
+        .fitur-img:hover, .fitur-img:focus{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .fitur-wrapper-title{
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+        }
+        .fitur-wrapper-title .fitur-title{
+            font-family: sans-serif;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .fitur-wrapper-title .fitur-title:hover .fitur-title:focus{
+            color: turquoise;
+            cursor: pointer;
+        }
+        .fitur-date{
+            font-family: sans-serif;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+        }
+        .fitur-title{
+            font-family: sans-serif;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+        .fitur-text{
+            height: 80px;
+            background-color: rgb(46, 98, 196);
+        }
+        .fitur{
+            margin-bottom: 32px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .fitur-title-wrapper{
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body bgcolor="silver">
+    <div class="fixed-header">
+        <div class="fh-right">
+            <div class="item-right">
+                <a href="" class="daftar">Daftar DetikId</a>
+                <a href="" class="masuk">Masuk</a>
+            </div>
+        </div>
+        <div class="fh-center">
+            <form action="">
+                <div class="search">
+                    <input type="text" name="" id="input" placeholder="Cari Berita.....">
+                    <button type="submit" id="button"><img src="gambar/22.png" width="10px" height=""></button>
+                </div>
+            </form>
+        </div>
+       <div class="kiri">
+           <div class="logo">
+               <img src="gambar/logo.png" alt="">
+           </div>
+       </div>
+    </div>
+   
+    <div class="container">
+        <div class="header">
+            <img class="header-img" src="gambar/logo.png" height="45">
+        </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="">detikNew</a></li>
+                    <li><a href="">detikFinance</a></li>
+                    <li><a href="">detikHot</a></li>
+                    <li><a href="">detikInet</a></li>
+                    <li><a href="">detikSport</a></li>
+                    <li><a href="">detikOto</a></li>
+                    <li><a href="">detikTravel</a></li>
+                    <li><a href="">detikFood</a></li>
+                    <li><a href="">detikHelath</a></li>
+                    <li><a href="">Wollipop</a></li>
+                    <li><a href="">20Detik</a></li>
+                   
+                </ul>
+            </div>
+         <div class="navigation2">   
+           
+                <ul>
+                    <li><a href="">LiveTV</a></li>
+                    <li><a href="">Adsmart</a></li>
+                    <li><a href="">Foto</a></li>
+                    <li><a href="">detikX</a></li>
+                    <li><a href="">SepakBola</a></li>
+                    <li><a href="">PasangMata</a></li>
+                    <li><a href="">Hikmah</a></li>
+                    <li><a href="">Edukasi</a></li>
+                    <li><a href="">Moto GP 2021</a></li>
+                    <li><a href="">Daftar Vaksin</a></li>
+                    
+                   
+                </ul>
+            </div>
+            <div class="content-top">
+                <div class="content-top-item">
+                    <div class="content-top-image">
+                        <img src="gambar/okee.png">
+                    </div>
+                    <div class="content-top-text">
+                        Covid-19 Mantap
+                    </div> 
+                </div>
+            </div>
+            <div class="content-top1">
+                <div class="content-top-item">
+                    <div class="content-top-image">
+                        <img src="gambar/ww.png">
+                    </div>
+                    <div class="content-top-text">
+                        Coach Madrid
+                    </div> 
+                </div>
+            </div>
+            <div class="content-top2">
+                <div class="content-top-item">
+                    <div class="content-top-image">
+                        <img src="gambar/jj.png">
+                    </div>
+                    <div class="content-top-text">
+                        Presiden Ke-1 RI
+                    </div> 
+                </div>
+            </div>
+            <div class="content-top3">
+                <div class="content-top-item">
+                    <div class="content-top-image">
+                        <img src="gambar/pp.png">
+                    </div>
+                    <div class="content-top-text">
+                        Ganjil Genap
+                    </div> 
+                </div>
+            </div>
+            <div class="content-top4">
+                <div class="content-top-item">
+                    <div class="content-top-image">
+                        <img src="gambar/okee.png">
+                    </div>
+                    <div class="content-top-text">
+                        Covid-19 Mantap
+                    </div> 
+                </div>
+            </div>
+            <div class="content">
+                
+            <div class="content-buttom">
+                <div class="content-left">
+                    <div class="fitur">
+                        <div class="fitur-img-wrapper">
+                            <div class="fitur-img">
+
+                            </div>
+                            <div class="fitur-title-wrapper">
+                                <div class="fitur-title">
+                                    Pemandangan Yang Sangat Indah di Pulai Dewata Papua
+                                </div>
+                                <div class="fitur-date">
+                                    detikNew | 3 jam yang lalu
+                                </div>  
+                            </div>
+                            
+                        </div>
+                        <div class="fitur-text"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+                <!-- <div class="left"></div>
+                <div class="right"></div> -->
+            </div>
+            <!-- <div class="footer">
+                <p>all@gmail.com</p>
+            </div> -->
+    </div>
+
+</body>
+</html>
